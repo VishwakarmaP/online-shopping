@@ -69,5 +69,5 @@ custom styling
 	position: absolute;
 	bottom: 15px;
 	height: 60px;
-	background-color: red;
+	align-self: center;
 }

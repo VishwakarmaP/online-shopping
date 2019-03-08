@@ -71,3 +71,8 @@ custom styling
 	height: 60px;
 	align-self: center;
 }
+
+.dataTableImg {
+	width:100px;
+	height:100px;
+}

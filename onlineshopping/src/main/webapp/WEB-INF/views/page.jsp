@@ -22,7 +22,8 @@
 <title>Online Shopping - ${title}</title>
 
 <script type="text/javascript">
-	window.menu = '${title}'
+	window.menu = '${title}';
+	window.contextRoot = '${contextRoot}'
 </script>
 
 <!-- Bootstrap core CSS -->
@@ -30,6 +31,8 @@
 
 <!-- Bootstrap readable theme  -->
 <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 
 <!-- Add custom CSS here -->
 <link href="${css}/myapp.css" rel="stylesheet">
@@ -74,6 +77,8 @@
 		<!-- JavaScript -->
 		<script src="${js}/jquery.js"></script>
 		<script src="${js}/bootstrap.js"></script>
+		<script src="${js}/jquery.dataTables.js"></script>
+		<script src="${js}/dataTables.bootstrap.js"></script>
 		<script src="${js}/myapp.js"></script>
 	</div>
 </body>

@@ -68,6 +68,10 @@
 				<%@ include file="listProducts.jsp"%>
 			</c:if>
 			
+			<!-- user click single product -->
+			<c:if test="${userClickShowProduct==true}">
+				<%@ include file="singleProduct.jsp"%>
+			</c:if>
 
 		</div>
 

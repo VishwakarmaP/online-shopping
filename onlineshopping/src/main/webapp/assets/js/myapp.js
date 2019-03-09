@@ -31,12 +31,13 @@ $(function() {
 	//execute the bellow code only where we have this table
 	
 	if($table.length){
+		
 		var jsonUrl = '';
 		if(window.categoryId == ''){
 			jsonUrl = window.contextRoot + '/json/data/all/products';
 		}
 		else{
-			jsonUrl = window.contextRoot + '/json/data/category/'+ window.cateogyId +'/products';
+			jsonUrl = window.contextRoot + '/json/data/category/'+window.categoryId+'/products';
 			
 		}
 		$table.DataTable({
@@ -51,7 +52,7 @@ $(function() {
 				{
 					data: 'code',
 					mRender: function(data, type, row){
-						return '<img src="'+window.contextRoot+'/resources/images/'+data+'.jpg class=dataTableImg"/>';
+						return '<img src="'+window.contextRoot+'/resources/images/'+data+'.jpg" class="dataTableImg"/>';
 					}
 				},
 				

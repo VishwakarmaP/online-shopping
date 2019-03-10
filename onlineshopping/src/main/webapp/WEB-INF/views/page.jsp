@@ -62,12 +62,13 @@
 			<c:if test="${userClickContact==true}">
 				<%@ include file="contact.jsp"%>
 			</c:if>
-			
+
 			<!-- when user click all products -->
-			<c:if test="${userClickAllProducts==true or userClickCategoryProducts==true}">
+			<c:if
+				test="${userClickAllProducts==true or userClickCategoryProducts==true}">
 				<%@ include file="listProducts.jsp"%>
 			</c:if>
-			
+
 			<!-- user click single product -->
 			<c:if test="${userClickShowProduct==true}">
 				<%@ include file="singleProduct.jsp"%>

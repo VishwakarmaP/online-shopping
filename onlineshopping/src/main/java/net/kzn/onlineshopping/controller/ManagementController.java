@@ -2,6 +2,7 @@ package net.kzn.onlineshopping.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.slf4j.Logger;
@@ -16,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import net.kzn.onlineshopping.util.FileUploadUtility;
+import net.kzn.onlineshopping.validator.ProductValidator;
 import net.kzn.shoppingbackend.dao.CategoryDAO;
 import net.kzn.shoppingbackend.dao.ProductDAO;
 import net.kzn.shoppingbackend.dto.Category;
@@ -55,7 +58,10 @@ public class ManagementController {
 	}
 	
 	@RequestMapping(value="/products", method=RequestMethod.POST)
-	public String handlerProductSubmission(@Valid @ModelAttribute("product") Product mProduct, BindingResult result, Model model) {
+	public String handlerProductSubmission(@Valid @ModelAttribute("product") Product mProduct, BindingResult result, Model model, HttpServletRequest request) {
+		
+		new ProductValidator().validate(mProduct, result);
+		
 		
 		//check if there are any error
 		if(result.hasErrors()) {
@@ -69,6 +75,10 @@ public class ManagementController {
 		logger.info(mProduct.toString());
 		
 		productDAO.add(mProduct);
+		
+		if(!mProduct.getFile().getOriginalFilename().equals("")) {
+			FileUploadUtility.uploadFile(request, mProduct.getFile(), mProduct.getCode());
+		}
 		
 		return "redirect:/manage/products?operation=product";
 	}

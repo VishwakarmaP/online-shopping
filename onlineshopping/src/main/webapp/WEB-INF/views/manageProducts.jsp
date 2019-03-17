@@ -114,46 +114,20 @@
 					<th>Id</th>
 					<th>&#160;</th>
 					<th>Name</th>
+					<th>Brand</th>
 					<th>Quantity</th>
 					<th>Unit Price</th>
 					<th>Active</th>
 					<th>Edit</th>
 				</tr>
 			</thead>
-			<tbody>
-				<tr>
-					<td>1</td>
-					<td><img class="adminDataTableImg" alt="macbook" src="${contextRoot}/resources/images/PRD123TX.jpg"></td>
-					<td>macbook</td>
-					<td>5</td>
-					<td>&#8377; 54000.00</td>
-					<td><label class="switch"><input type="checkbox" checked="checked" value="1">
-					<div class="slider"></div>
-					</label></td>
-					<td><a href="${contextRoot}/manage/1/product" class="btn btn-warning">
-					<span class="glyphicon glyphicon-pencil"></span>
-					</a></td>
-				</tr>
-				
-				<tr>
-					<td>1</td>
-					<td><img class="adminDataTableImg" alt="macbook" src="${contextRoot}/resources/images/PRD123TX.jpg"></td>
-					<td>macbook</td>
-					<td>5</td>
-					<td>&#8377; 54000.00</td>
-					<td><label class="switch"><input type="checkbox" value="1">
-					<div class="slider"></div>
-					</label></td>
-					<td><a href="${contextRoot}/manage/1/product" class="btn btn-warning">
-					<span class="glyphicon glyphicon-pencil"></span>
-					</a></td>
-				</tr>
-			</tbody>
+			
 			<tfoot>
 				<tr>
 					<th>Id</th>
 					<th>&#160;</th>
 					<th>Name</th>
+					<th>Brand</th>
 					<th>Quantity</th>
 					<th>Unit Price</th>
 					<th>Active</th>
@@ -163,5 +137,5 @@
 		</table>
 	</div>
 </div>
-
+</div>
 </div>

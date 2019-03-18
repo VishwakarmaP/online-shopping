@@ -203,7 +203,7 @@ var $adminProductsTable = $('#adminProductsTable');
 						
 						var str = '';
 						
-						str += '<a href="${contextRoot}/manage/'+data+'/product" class="btn btn-warning">';
+						str += '<a href="'+window.contextRoot+'/manage/'+data+'/product" class="btn btn-warning">';
 						str += '<span class="glyphicon glyphicon-pencil"></span></a>';
 						return str;
 					}
@@ -225,10 +225,14 @@ var $adminProductsTable = $('#adminProductsTable');
 						callback: function(confirmed){
 							if(confirmed){
 								console.log(value);
-								bootbox.alert({
-									size: 'medium',
-									title: 'Information',
-									message: 'You are going to perform operation on product ' + value
+								
+								var activationUrl = window.contextRoot + '/manage/product/'+ value +'/activation';
+								$.post(activationUrl,function(data){
+									bootbox.alert({
+										size: 'medium',
+										title: 'Information',
+										message: data
+									});
 								});
 							}
 							else{
@@ -243,7 +247,39 @@ var $adminProductsTable = $('#adminProductsTable');
 	}
 	
 	//----------------------------------------
+	//validation code for category
 	
+	var $categoryForm = $('#categoryForm');
+	if($categoryForm.length){
+		$categoryForm.validate({
+			
+			rules : {
+				name : {
+					required : true,
+					minlength: 2
+				},
+				description:{
+					required: true
+				}
+			},
+			message : {
+				name : {
+					required: 'Please add the category name!',
+					minlength: 'The category name should not be less thean 2 charectors'
+				},
+				desciption: {
+					required: 'Please add a description for this category!'
+				}
+			},
+			errorElement: 'em',
+			errorPlacement: function(error, element){
+				//add the class of help-block
+				error.addClass('help-block');
+				//add the error element after the input element
+				error.insertAfter(element);
+			}
+		});
+	}
 });
 
 

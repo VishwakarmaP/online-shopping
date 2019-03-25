@@ -13,36 +13,42 @@
 										<label class="control-label col-md-4" for="addressLineOne">Address Line One</label>
 										<div class="col-md-8">
 											<sf:input path="addressLineOne" type="text" class="form-control" placeholder="Address Line One"/>
+											<sf:errors path="addressLineOne" cssClass="help-block" element="em"></sf:errors>
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="control-label col-md-4" for="addressLineTwo">Address Line Two</label>
 										<div class="col-md-8">
 											<sf:input path="addressLineTwo" type="text" class="form-control" placeholder="Address Line Two"/>
+											<sf:errors path="addressLineTwo" cssClass="help-block" element="em"></sf:errors>
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="control-label col-md-4" for="city">City</label>
 										<div class="col-md-8">
 											<sf:input path="city" type="text" class="form-control" placeholder="Enter City Name"/>
+											<sf:errors path="city" cssClass="help-block" element="em"></sf:errors>
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="control-label col-md-4" for="postalCode">Postal Code</label>
 										<div class="col-md-8">
 											<sf:input path="postalCode" type="text" class="form-control" placeholder="xxxxxx"/>
+											<sf:errors path="postalCode" cssClass="help-block" element="em"></sf:errors>
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="control-label col-md-4" for="state">State</label>
 										<div class="col-md-8">
 											<sf:input path="state" type="text" class="form-control" placeholder="Enter State Name"/>
+											<sf:errors path="state" cssClass="help-block" element="em"></sf:errors>
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="control-label col-md-4" for="country">Country</label>
 										<div class="col-md-8">
 											<sf:input path="country" type="text" class="form-control" placeholder="Enter Country Name"/>
+											<sf:errors path="country" cssClass="help-block" element="em"></sf:errors>
 										</div>
 									</div>
 									<div class="form-group">

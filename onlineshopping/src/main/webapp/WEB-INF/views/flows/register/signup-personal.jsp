@@ -13,30 +13,42 @@
 										<label class="control-label col-md-4">First Name</label>
 										<div class="col-md-8">
 											<sf:input path="firstName" type="text" class="form-control" placeholder="First Name"/>
+											<sf:errors path="firstName" cssClass="help-block" element="em"></sf:errors>
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="control-label col-md-4">Last Name</label>
 										<div class="col-md-8">
 											<sf:input path="lastName" type="text" class="form-control" placeholder="Last Name"/>
+											<sf:errors path="lastName" cssClass="help-block" element="em"></sf:errors>
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="control-label col-md-4">Email</label>
 										<div class="col-md-8">
 											<sf:input path="email" type="text" class="form-control" placeholder="example@xyz.com"/>
+											<sf:errors path="email" cssClass="help-block" element="em"></sf:errors>
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="control-label col-md-4">Contact Number</label>
 										<div class="col-md-8">
 											<sf:input path="contactNumber" type="text" class="form-control" placeholder="xxxxxxxxx" maxlength="10"/>
+											<sf:errors path="contactNumber" cssClass="help-block" element="em"></sf:errors>
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="control-label col-md-4">Password</label>
 										<div class="col-md-8">
-											<sf:input path="password" type="text" class="form-control" placeholder="Password"/>
+											<sf:input path="password" type="password" class="form-control" placeholder="Password"/>
+											<sf:errors path="password" cssClass="help-block" element="em"></sf:errors>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-4">Confirm Password</label>
+										<div class="col-md-8">
+											<sf:input path="confirmPassword" type="password" class="form-control" placeholder="Re-enter Password"/>
+											<sf:errors path="confirmPassword" cssClass="help-block" element="em"></sf:errors>
 										</div>
 									</div>
 									<div class="form-group">
@@ -46,7 +58,7 @@
 												<sf:radiobutton path="role" value="USER" checked="checked"/> User
 											</label>
 											<label class="radio-inline">
-												<sf:radiobutton path="role" value="SUPPLIER" checked="checked"/> Supplier
+												<sf:radiobutton path="role" value="SUPPLIER" /> Supplier
 											</label>
 										</div>
 									</div>

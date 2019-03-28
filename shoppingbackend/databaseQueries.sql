@@ -21,18 +21,18 @@ create table user_detail (
 	last_name varchar(50),
 	role varchar(50),
 	enabled boolean,
-	password varchar(50),
+	password varchar(60),
 	email varchar(100),
 	contact_number varchar(15),
 	constraint pk_user_id primary key(id),
 );
 
 insert into user_detail(first_name,last_name,role,enabled,password,email,contact_number)
-values ('Virat','kohli','admin',true,'admin','vk@email.com','9982345671');
+values ('Virat','kohli','ADMIN',true,'admin','vk@email.com','9982345671');
 insert into user_detail(first_name,last_name,role,enabled,password,email,contact_number)
-values ('Rohit','sharma','supplier',true,'12345','rs@email.com','9345345671');
+values ('Rohit','sharma','SUPPLIER',true,'12345','rs@email.com','9345345671');
 insert into user_detail(first_name,last_name,role,enabled,password,email,contact_number)
-values ('Mahendra','shing','supplier',true,'admin','ms@email.com','9456765671');
+values ('Mahendra','shing','USER',true,'admin','ms@email.com','9456765671');
 
 create table product (
 	id IDENTITY,

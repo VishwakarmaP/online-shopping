@@ -60,3 +60,16 @@ insert into product(code,name,brand,description,unit_price,quantity,is_active,ca
 values('DERD123TX','samsung','samsung','this is the mobile',11000,4,true,3,3);
 insert into product(code,name,brand,description,unit_price,quantity,is_active,category_id,supplier_id)
 values('TTD123TX','igoTV','igo','this is the igoTV',60000,2,true,2,2);
+
+create table cart_line(
+	id identity,
+	cart_id int,
+	total decimal(10,2),
+	product_id int,
+	product_count int,
+	buying_price decimal(10,2),
+	is_available boolean,
+	constraint pk_cartline_id primary key(id),
+	constraint fk_cartline_cart_id foreign key (cart_id) references cart(id),
+	constraint fk_cartline_product_id foreign key (product_id) references product(id),
+);

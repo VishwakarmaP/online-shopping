@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import net.kzn.shoppingbackend.dao.UserDAO;
 import net.kzn.shoppingbackend.dto.Address;
-import net.kzn.shoppingbackend.dto.Cart;
 import net.kzn.shoppingbackend.dto.User;
 
 @Repository("userDAO")
@@ -45,18 +44,6 @@ public class UserDAOImpl implements UserDAO {
 	}
 
 	@Override
-	public boolean updateCart(Cart cart) {
-		try {
-			sessionFactory.getCurrentSession().update(cart);
-			return true;
-		}
-		catch(Exception ex) {
-			ex.printStackTrace();
-			return false;
-		}
-	}
-
-	@Override
 	public User getByEmail(String email) {
 		String selectQuery = "from User where email = :email";
 		
@@ -64,7 +51,7 @@ public class UserDAOImpl implements UserDAO {
 			return sessionFactory.getCurrentSession().createQuery(selectQuery, User.class).setParameter("email", email).getSingleResult();
 		}
 		catch (Exception ex) {
-			ex.printStackTrace();
+			//ex.printStackTrace();
 			return null;
 		}
 	}

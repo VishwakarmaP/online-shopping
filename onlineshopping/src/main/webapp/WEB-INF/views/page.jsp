@@ -80,7 +80,12 @@
 			<c:if test="${userClickManageProducts==true}">
 				<%@ include file="manageProducts.jsp"%>
 			</c:if>
-
+			
+			<!-- user click show cart -->
+			<c:if test="${userClickShowCart==true}">
+				<%@ include file="cart.jsp"%>
+			</c:if>
+			
 		</div>
 
 		<!-- footer -->
